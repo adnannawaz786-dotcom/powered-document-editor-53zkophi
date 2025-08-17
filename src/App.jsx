@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'sonner'
 import DocumentEditor from './components/DocumentEditor'
 import Sidebar from './components/Sidebar'
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from 'react-resizable-panels'
+import { PanelGroup, Panel, PanelResizeHandle } from 'react-resizable-panels'
 
 function App() {
   return (
@@ -26,12 +26,12 @@ function App() {
 function HomePage() {
   return (
     <div className="flex h-full">
-      <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel defaultSize={20} minSize={15} maxSize={25}>
+      <PanelGroup direction="horizontal">
+        <Panel defaultSize={20} minSize={15} maxSize={25}>
           <Sidebar />
-        </ResizablePanel>
-        <ResizableHandle />
-        <ResizablePanel defaultSize={80}>
+        </Panel>
+        <PanelResizeHandle />
+        <Panel defaultSize={80}>
           <div className="flex items-center justify-center h-full bg-gray-50 dark:bg-gray-900">
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">
@@ -48,8 +48,8 @@ function HomePage() {
               </button>
             </div>
           </div>
-        </ResizablePanel>
-      </ResizablePanelGroup>
+        </Panel>
+      </PanelGroup>
     </div>
   )
 }
@@ -57,15 +57,15 @@ function HomePage() {
 function DocumentPage() {
   return (
     <div className="flex h-full">
-      <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel defaultSize={20} minSize={15} maxSize={25}>
+      <PanelGroup direction="horizontal">
+        <Panel defaultSize={20} minSize={15} maxSize={25}>
           <Sidebar />
-        </ResizablePanel>
-        <ResizableHandle />
-        <ResizablePanel defaultSize={80}>
+        </Panel>
+        <PanelResizeHandle />
+        <Panel defaultSize={80}>
           <DocumentEditor />
-        </ResizablePanel>
-      </ResizablePanelGroup>
+        </Panel>
+      </PanelGroup>
     </div>
   )
 }
@@ -73,15 +73,15 @@ function DocumentPage() {
 function NewDocumentPage() {
   return (
     <div className="flex h-full">
-      <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel defaultSize={20} minSize={15} maxSize={25}>
+      <PanelGroup direction="horizontal">
+        <Panel defaultSize={20} minSize={15} maxSize={25}>
           <Sidebar />
-        </ResizablePanel>
-        <ResizableHandle />
-        <ResizablePanel defaultSize={80}>
+        </Panel>
+        <PanelResizeHandle />
+        <Panel defaultSize={80}>
           <DocumentEditor isNew={true} />
-        </ResizablePanel>
-      </ResizablePanelGroup>
+        </Panel>
+      </PanelGroup>
     </div>
   )
 }
