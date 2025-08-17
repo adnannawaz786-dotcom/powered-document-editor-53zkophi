@@ -5,6 +5,7 @@ import { Toaster } from 'sonner'
 import DocumentEditor from './components/Editor'
 import Sidebar from './components/AISidebar'
 import Navbar from './components/Navbar'
+import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from 'react-resizable-panels'
 
 function App() {
   return (
