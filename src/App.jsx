@@ -2,9 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'sonner'
-import DocumentEditor from './components/Editor'
-import Sidebar from './components/AISidebar'
-import Navbar from './components/Navbar'
+import DocumentEditor from './components/DocumentEditor'
+import Sidebar from './components/Sidebar'
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from 'react-resizable-panels'
 
 function App() {
