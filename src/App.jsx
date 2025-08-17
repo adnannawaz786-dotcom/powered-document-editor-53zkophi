@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'sonner'
 import DocumentEditor from './components/DocumentEditor'
 import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
 import { PanelGroup, Panel, PanelResizeHandle } from 'react-resizable-panels'
 
 function App() {
